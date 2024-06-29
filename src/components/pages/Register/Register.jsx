@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 
 const Register = () => {
@@ -28,7 +29,7 @@ const Register = () => {
     <div className="hero bg-base-200 min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">Login now!</h1>
+      <h1 className="text-5xl font-bold">Register now!</h1>
       <p className="py-6">
         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
         quasi. In deleniti eaque aut repudiandae et a id nisi.
@@ -52,9 +53,12 @@ const Register = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn btn-primary">Register</button>
         </div>
       </form>
+      <div>
+        <Link to="/login">Login</Link>
+      </div>
     </div>
   </div>
 </div>
