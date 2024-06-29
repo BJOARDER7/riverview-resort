@@ -1,25 +1,45 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const Register = () => {
-  const {createUser} = useContext(AuthContext);
+  const {createUser} = useContext(AuthContext); 
+
 
   const handleRegister = e => {
-    e.preventDefault();
+    e.preventDefault();    
+
     const form = new FormData(e.currentTarget);
     const email = form.get('email');
     const password = form.get('password');
     console.log(email, password);
+
+    // password validation
+    if(password.length < 6){
+      toast('Password at least 6 character');     
+      return;
+    }
+    else if (!/[A-Z]/.test(password)){
+      toast('Password must have an Uppercase letter');      
+      return;
+    }
+    else if (!/[a-z]/.test(password)){
+      toast('Password must have a Lowercase letter');      
+      return;
+    }
+
+
     // create user
   createUser(email, password)
   .then(result => {
     const loggedUser = result.user;
     console.log(loggedUser);
+    toast("User created successfully");
   })
-  .then(error => {
-    console.log(error)
+  .catch(error => {      
+    toast(error.message);    
   })
 
   }
@@ -58,9 +78,11 @@ const Register = () => {
       </form>
       <div>
         <Link to="/login">Login</Link>
-      </div>
+      </div>      
+      
     </div>
   </div>
+  <div><Toaster/></div>
 </div>
   );
 };
