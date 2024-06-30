@@ -1,0 +1,110 @@
+[
+    {
+        "relevant_image": "https://i.ibb.co/hYF34wh/img1.jpg",
+        "estate_title": "Boutique Hotel",
+        "id": "1",
+        "segment_name": "Hospitality",
+        "description": "A chic boutique hotel with modern amenities.",
+        "price": "$2000",
+        "status": "rent",
+        "area": "15000 sq ft",
+        "location": "Downtown",
+        "facilities": ["lobby", "swimming pool", "restaurant", "spa"]
+    },
+    {
+        "relevant_image": "https://i.ibb.co/d4V29h0/img2.jpg",
+        "estate_title": "Beach Resort",
+        "id": "2",
+        "segment_name": "Hospitality",
+        "description": "A luxurious beach resort with private villas.",
+        "price": "$1000",
+        "status": "rent",
+        "area": "50000 sq ft",
+        "location": "Beachfront",
+        "facilities": ["private beach", "swimming pool", "restaurant", "spa", "fitness center"]
+    },
+    {
+        "relevant_image": "https://i.ibb.co/kJYnMXR/img3.jpg",
+        "estate_title": "Mountain Lodge",
+        "id": "3",
+        "segment_name": "Hospitality",
+        "description": "A cozy mountain lodge perfect for winter getaways.",
+        "price": "$3000",
+        "status": "rent",
+        "area": "10000 sq ft",
+        "location": "Mountain",
+        "facilities": ["lobby", "restaurant", "fireplace", "sauna"]
+    },
+    {
+        "relevant_image": "https://i.ibb.co/MpJFHWY/img4.jpg",
+        "estate_title": "Urban Hotel",
+        "id": "4",
+        "segment_name": "Hospitality",
+        "description": "A modern hotel located in the heart of the city.",
+        "price": "$1500",
+        "status": "rent",
+        "area": "20000 sq ft",
+        "location": "City Center",
+        "facilities": ["lobby", "restaurant", "bar", "conference rooms"]
+    },
+    {
+        "relevant_image": "https://i.ibb.co/YXFTg6c/img5.jpg",
+        "estate_title": "Country Inn",
+        "id": "5",
+        "segment_name": "Hospitality",
+        "description": "A charming country inn with a rustic feel.",
+        "price": "$1500",
+        "status": "rent",
+        "area": "8000 sq ft",
+        "location": "Countryside",
+        "facilities": ["lobby", "restaurant", "garden", "fireplace"]
+    },
+    {
+        "relevant_image": "https://i.ibb.co/hgVd3kP/img6.jpg",
+        "estate_title": "Spa Retreat",
+        "id": "6",
+        "segment_name": "Hospitality",
+        "description": "A serene spa retreat offering luxurious treatments.",
+        "price": "$1000",
+        "status": "rent",
+        "area": "25000 sq ft",
+        "location": "Coastal",
+        "facilities": ["lobby", "restaurant", "spa", "yoga studio", "meditation room"]
+    },
+    {
+        "relevant_image": "https://i.ibb.co/C2YQDpj/img7.jpg",
+        "estate_title": "Business Hotel",
+        "id": "7",
+        "segment_name": "Hospitality",
+        "description": "A business hotel with top-notch conference facilities.",
+        "price": "$2500",
+        "status": "srent",
+        "area": "18000 sq ft",
+        "location": "Financial District",
+        "facilities": ["lobby", "restaurant", "conference rooms", "fitness center"]
+    },
+    {
+        "relevant_image": "https://i.ibb.co/DbdykZn/img8.jpg",
+        "estate_title": "Eco Lodge",
+        "id": "8",
+        "segment_name": "Hospitality",
+        "description": "An eco-friendly lodge set in a natural environment.",
+        "price": "$2300",
+        "status": "rent",
+        "area": "12000 sq ft",
+        "location": "Forest",
+        "facilities": ["lobby", "restaurant", "nature trails", "organic garden"]
+    },
+    {
+        "relevant_image": "https://i.ibb.co/28WHBgs/img9.jpg",
+        "estate_title": "Historic Hotel",
+        "id": "9",
+        "segment_name": "Hospitality",
+        "description": "A beautifully restored historic hotel.",
+        "price": "$2000",
+        "status": "rent",
+        "area": "22000 sq ft",
+        "location": "Historic District",
+        "facilities": ["lobby", "restaurant", "bar", "event spaces"]        
+    }
+]
