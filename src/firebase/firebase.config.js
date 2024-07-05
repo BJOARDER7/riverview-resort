@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBZqYYNzooVKL2zVRTxchnOXNTNB3LAUj4",
-  authDomain: "riverview-resort-firebase-auth.firebaseapp.com",
-  projectId: "riverview-resort-firebase-auth",
-  storageBucket: "riverview-resort-firebase-auth.appspot.com",
-  messagingSenderId: "77789324379",
-  appId: "1:77789324379:web:fc39da9e48f4355624cb7e"
+  apiKey:import.meta.env.VITE_APIKEY,
+  authDomain:import.meta.env.VITE_AUTHDOMAIN,
+  projectId:import.meta.env.VITE_PROJECTID,
+  storageBucket:import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERID,
+  appId:import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
