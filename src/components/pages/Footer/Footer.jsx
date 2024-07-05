@@ -3,7 +3,7 @@ import footerImg from "../../../assets/slider4.jpg";
 const Footer = () => {
   return (
     <footer>
-    <div className="footer p-80000 bg-neutral text-neutral-content">
+    <div className="footer p-8 bg-neutral text-neutral-content">
   <div>
   <img className="h-12 rounded-lg" src={footerImg} alt="" />
     <p  className="text-2xl">RiverView Resort</p>

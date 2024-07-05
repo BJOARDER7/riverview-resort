@@ -4,6 +4,8 @@ import Home from "../components/pages/Home/Home";
 import Login from "../components/pages/Login/Login";
 import Register from "../components/pages/Register/Register";
 import ErrorPage from "../components/pages/ErrorPage/ErrorPage";
+import EstateDetails from "../components/pages/EstateDetails/EstateDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +15,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch('/hospitality.json')
       },
       {
         path: "/login",
@@ -23,7 +26,11 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>
       },
-      
+      {
+        path: "/details/:id",
+        element: <PrivateRoute><EstateDetails></EstateDetails></PrivateRoute>       
+      }
+
     ]
   },
 ])

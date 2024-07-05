@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
 
 
-const Estate = ({item}) => {
-  const {id, relevant_image, estate_title, description, price, status, area, location, facilities} = item;
-  console.log(item)
+const EstateDetails = () => {
+  // const {relevant_image, estate_title, description, price, status, area, location, facilities} = item;
+  // console.log(item)
+  const {id} = useParams();
+
   return (
     <div className="card bg-base-100 w-96 shadow-xl">
   <figure className="px-10 pt-10">
@@ -25,7 +27,7 @@ const Estate = ({item}) => {
       <div>
         <p>Facilities -</p>
         <div className="ps-16">
-        {facilities.slice(0,3).map((list, idx) => <li key={idx}>{list}</li>)}
+        {facilities.map((list, idx) => <li key={idx}>{list}</li>)}
         </div>
       </div>      
       </div>
@@ -35,18 +37,14 @@ const Estate = ({item}) => {
       </div>
       
     </div>
-    <div className="card-actions mx-auto">
-      <Link to={`/details/${id}`}>
-      <button className="btn btn-primary">View Property</button>
-      </Link>
-    </div>
+    
   </div>
 </div>
   );
 };
 
-Estate.propTypes = {
+EstateDetails.propTypes = {
   item: PropTypes.object
 }
 
-export default Estate;
+export default EstateDetails;
