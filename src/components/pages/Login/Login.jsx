@@ -22,7 +22,7 @@ const Login = () => {
       console.log(loggedUser);
 
       // navigation after login
-      navigate(location?.state ? location.state : '/login');
+      navigate(location?.state ? location.state : '/');
 
     })
     .catch(error => {
@@ -36,7 +36,7 @@ const Login = () => {
       const loggedUser = result.user;
       console.log(loggedUser);
     })
-    .then(error => {
+    .catch(error => {
       console.log(error);
     })
   }
