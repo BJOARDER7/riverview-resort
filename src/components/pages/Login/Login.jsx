@@ -4,7 +4,7 @@ import { AuthContext } from "../../../providers/AuthProvider";
 
 
 const Login = () => {
-  const {logIn, googleLogin} = useContext(AuthContext);
+  const {logIn, googleLogin, githubLogin} = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -40,16 +40,22 @@ const Login = () => {
       console.log(error);
     })
   }
+
+  const handleGithubLogin = () => {
+    githubLogin()
+    .then(result => {
+      console.log(result.user);
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
   
   return (
     <div className="hero bg-base-200 min-h-screen">
-  <div className="hero-content flex-col lg:flex-row-reverse">
+  <div className="hero-content flex-col lg:flex-row">
     <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">Login now!</h1>
-      <p className="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
-      </p>
+      <h1 className="text-5xl font-bold">Please Login !</h1>      
     </div>
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <form onSubmit={handleLogin} className="card-body">
@@ -72,11 +78,16 @@ const Login = () => {
           <button className="btn btn-primary">Login</button>
         </div>
       </form>
-      <div>
-        <button onClick={handleGoogleLogin} className="btn">Google</button>
+      <div className="mx-auto">
+        <p className="text-center font-medium text-xl">Login with</p>
+        <div className="flex items-center gap-2">
+        <button onClick={handleGoogleLogin} className="btn btn-sm btn-accent my-2">Google</button>
+        <button onClick={handleGithubLogin} className="btn btn-sm btn-error my-2">Github</button>
+        </div>
       </div>
-      <div>
-        <Link to="/register">Register</Link>
+      <div className="text-center my-2">
+        <p>Are you new ? Please <Link className="text-emerald-600 font-bold" to="/register">Register</Link></p>
+        
       </div>
     </div>
   </div>

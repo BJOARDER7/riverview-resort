@@ -7,9 +7,9 @@ const Navbar = () => {
   const {user, logOut} = useContext(AuthContext);
 
   const navLinks = <>
-    <NavLink to="/">Home</NavLink>
-    <NavLink className={'px-4'} to="/update">Update Profile</NavLink>
-    <NavLink to="/user">User Profile</NavLink>
+    <li className="px-1"><NavLink to="/">Home</NavLink></li>
+    <li className="px-1"><NavLink to="/update">Update Profile</NavLink></li>  
+    
   </>
 
   const handleLogOut = () => {
@@ -17,6 +17,7 @@ const Navbar = () => {
     .then(() => console.log('User login successfully'))
     .catch(error => console.log(error))
   }
+  
 
   return (
     <div className="navbar bg-base-100">
@@ -56,12 +57,19 @@ const Navbar = () => {
   <div className="navbar-end">
     {
       user ? <>
-      <span>{user.email}</span>
-      <a onClick={handleLogOut} className="btn btn-sm">Sign Out</a>
+      <div title={user.displayName} tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+      <div className="w-10 rounded-full">
+          <img
+            alt="User"
+            src={user.photoURL} />
+        </div>
+        </div>
+      <a onClick={handleLogOut} className="btn btn-sm btn-outline ms-2">Sign Out</a>
       </>
       :
       <Link to="/login">
-        <button className="btn btn-sm">Login</button>
+        
+        <button className="btn btn-sm btn-accent">Login</button>
         </Link>
     }
     
