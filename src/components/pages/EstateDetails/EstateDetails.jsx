@@ -1,39 +1,40 @@
-import PropTypes from 'prop-types';
-import { useParams } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 
-const EstateDetails = () => {
-  // const {relevant_image, estate_title, description, price, status, area, location, facilities} = item;
-  // console.log(item)
+const EstateDetails = () => { 
+  const details = useLoaderData();
   const {id} = useParams();
+  
+  const item = details.find(item => item.id === id);
+  console.log(item)
 
   return (
-    <div className="card bg-base-100 w-96 shadow-xl">
+    <div className="card bg-base-100 w-2/3 shadow-xl mx-auto">
   <figure className="px-10 pt-10">
     <img
-      src={relevant_image}
+      src={item.relevant_image}
       alt="Resort"
       className="rounded-xl" />
   </figure>
-  <div className="card-body">
-    <h2 className="card-title">{estate_title}</h2>
-    <p>{description}</p>
+  <div className="card-body mx-auto">
+    <h2 className="card-title">{item.estate_title}</h2>
+    <p>{item.description}</p>
     <div className="flex justify-between">
-      <p>Location: {location}</p>
-      <p>Area: {area}</p>
+      <p>Location: {item.location}</p>
+      <p>Area: {item.area}</p>
       </div>
     <div>
       <div className="flex justify-between">      
       <div>
         <p>Facilities -</p>
         <div className="ps-16">
-        {facilities.map((list, idx) => <li key={idx}>{list}</li>)}
+        {item.facilities.map((list, idx) => <li key={idx}>{list}</li>)}
         </div>
       </div>      
       </div>
       <div className="flex justify-between py-4">
-      <p>Price: {price}</p>
-      <p>Status: {status}</p>
+      <p>Price: {item.price}</p>
+      <p>Status: {item.status}</p>
       </div>
       
     </div>
@@ -42,9 +43,5 @@ const EstateDetails = () => {
 </div>
   );
 };
-
-EstateDetails.propTypes = {
-  item: PropTypes.object
-}
 
 export default EstateDetails;
