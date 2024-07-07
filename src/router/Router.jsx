@@ -7,6 +7,7 @@ import ErrorPage from "../components/pages/ErrorPage/ErrorPage";
 import EstateDetails from "../components/pages/EstateDetails/EstateDetails";
 import PrivateRoute from "./PrivateRoute";
 import UpdateProfile from "../components/pages/UpdateProfile/UpdateProfile";
+import Booking from "../components/pages/Booking/Booking";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/update",
         element: <UpdateProfile></UpdateProfile>
+      },
+      {
+        path: "/booking",
+        element: <PrivateRoute><Booking></Booking></PrivateRoute>
       },
       {
         path: "/details/:id",

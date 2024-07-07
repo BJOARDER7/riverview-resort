@@ -1,12 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { Helmet } from "react-helmet";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 const Register = () => {
-  const {createUser} = useContext(AuthContext); 
+  const {createUser} = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false); 
 
 
   const handleRegister = e => {
@@ -77,11 +79,20 @@ const Register = () => {
           </label>
           <input type="photo" name="photo" placeholder="Photo URL" className="input input-bordered" required />
         </div>
-        <div className="form-control">
+        <div className="form-control relative">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" name="password" placeholder="Password" className="input input-bordered" required />          
+          <input 
+          type={showPassword ? 'text' : 'password'} 
+          name="password" 
+          placeholder="Password" 
+          className="input input-bordered" required />
+          <span className="absolute inset-y-0 right-1 top-8 right-4 flex items-center" onClick={() => setShowPassword(!showPassword)}>
+            {
+              showPassword ? <FaEyeSlash className="text-2xl"></FaEyeSlash> : <FaEye className="text-2xl"></FaEye>
+            }
+            </span>          
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Register</button>

@@ -21,7 +21,6 @@ const UpdateProfile = () => {
     .then(() => console.log('Profile updated'))
     .catch(error => console.log(error))
   }
-
   
 
   return (
