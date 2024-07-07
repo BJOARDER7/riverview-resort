@@ -3,7 +3,7 @@
 * Website Name
   * RiverView Resort
 * Website live URL
-  * [RiverView Resort](http://localhost:5173/)
+  * [RiverView Resort](https://riverview-resort-firebase-auth.web.app)
 * Features and characteristics of website
   * Luxurious resort
   * Honeymoon zone
