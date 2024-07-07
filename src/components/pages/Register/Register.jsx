@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 
 const Register = () => {
@@ -49,6 +50,9 @@ const Register = () => {
 
   return (
     <div className="hero bg-base-200 min-h-screen">
+      <Helmet 
+      title="RiverView Resort | Register"
+      ></Helmet>
   <div className="hero-content flex-col lg:flex-row">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Register Now!</h1>      
@@ -83,8 +87,8 @@ const Register = () => {
           <button className="btn btn-primary">Register</button>
         </div>
       </form>
-      <div>
-        <Link to="/login">Login</Link>
+      <div className="text-center my-2">
+        <p>Have an account ? Please <Link className="text-emerald-600 font-bold" to="/login">Login</Link></p>        
       </div>      
       
     </div>

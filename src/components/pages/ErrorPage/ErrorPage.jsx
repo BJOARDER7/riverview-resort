@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import errorImg from "../../../assets/404-error.jpg";
+import { Helmet } from "react-helmet";
 
 const ErrorPage = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center min-h-screen bg-gray-100">
+    <Helmet 
+      title="RiverView Resort | Error"
+      ></Helmet>
     <div className="flex justify-center items-center">
     <img
       src={errorImg}

@@ -9,15 +9,15 @@ const Slider = () => {
     <Carousel>
                 <div>
                     <img src={slider1} />
-                    <p className="legend">Legend 1</p>
+                    <p className="legend">Please Join RiverView Cafe</p>
                 </div>
                 <div>
                     <img src={slider2} />
-                    <p className="legend">Legend 2</p>
+                    <p className="legend">Vacation time tour Resort</p>
                 </div>
                 <div>
                     <img src={slider3} />
-                    <p className="legend">Legend 3</p>
+                    <p className="legend">Honeymoon tour in Resort</p>
                 </div>
             </Carousel>
   );

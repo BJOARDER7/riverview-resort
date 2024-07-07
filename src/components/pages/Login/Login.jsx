@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { Helmet } from "react-helmet";
 
 
 const Login = () => {
@@ -53,6 +54,9 @@ const Login = () => {
   
   return (
     <div className="hero bg-base-200 min-h-screen">
+      <Helmet 
+      title="RiverView Resort | Login"
+      ></Helmet>
   <div className="hero-content flex-col lg:flex-row">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Please Login !</h1>      
@@ -86,8 +90,7 @@ const Login = () => {
         </div>
       </div>
       <div className="text-center my-2">
-        <p>Are you new ? Please <Link className="text-emerald-600 font-bold" to="/register">Register</Link></p>
-        
+        <p>Are you new ? Please <Link className="text-emerald-600 font-bold" to="/register">Register</Link></p>        
       </div>
     </div>
   </div>

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import { useLoaderData, useParams } from 'react-router-dom';
 
 
@@ -10,6 +11,9 @@ const EstateDetails = () => {
 
   return (
     <div className="card bg-base-100 w-2/3 shadow-xl mx-auto">
+      <Helmet 
+      title="RiverView Resort | Estate Details"
+      ></Helmet>
   <figure className="px-10 pt-10">
     <img
       src={item.relevant_image}

@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { Helmet } from "react-helmet";
 
 
 const UpdateProfile = () => {
@@ -21,8 +22,14 @@ const UpdateProfile = () => {
     .catch(error => console.log(error))
   }
 
+  
+
   return (
+    
     <div className="hero bg-base-200 min-h-screen">
+      <Helmet 
+      title="RiverView Resort | Update"
+      ></Helmet>
   <div className="hero-content flex-col lg:flex-row">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Update Profile</h1>      
