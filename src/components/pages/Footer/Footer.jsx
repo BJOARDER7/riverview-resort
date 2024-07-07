@@ -3,10 +3,10 @@ import footerImg from "../../../assets/slider4.jpg";
 const Footer = () => {
   return (
     <footer>
-    <div className="footer p-8 bg-neutral text-neutral-content">
+    <div className="footer p-4 md:p-8 bg-neutral text-neutral-content">
   <div>
-  <img className="h-12 rounded-lg" src={footerImg} alt="" />
-    <p  className="text-2xl">RiverView Resort</p>
+  <img className="h-8 md:h-12 rounded-lg" src={footerImg} alt="" />
+    <p  className="text-lg md:text-2xl">RiverView Resort</p>
     <p>We have to provide you with authentic travel experiences.</p>
   </div> 
   <div>
@@ -18,7 +18,7 @@ const Footer = () => {
     </div>
   </div>
 </div>
-<div className="footer-center p-4 bg-base-300 text-base-content">
+<div className="footer-center p-2 md:p-4 bg-base-300 text-base-content">
   <div>
     <p>Copyright © 2024 - All right reserved by RiverView Resort</p>
   </div>

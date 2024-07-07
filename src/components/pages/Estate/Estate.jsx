@@ -7,7 +7,7 @@ const Estate = ({item}) => {
   console.log(item)
   return (
     <div className="card bg-base-100 w-96 shadow-xl">
-      
+            
   <figure className="px-10 pt-10">
     <img
       src={relevant_image}
@@ -25,7 +25,7 @@ const Estate = ({item}) => {
       <div className="flex justify-between">      
       <div>
         <p>Facilities -</p>
-        <div className="ps-16">
+        <div className="ps-8 md:ps-16">
         {facilities.slice(0,3).map((list, idx) => <li key={idx}>{list}</li>)}
         </div>
       </div>      

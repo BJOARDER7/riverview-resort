@@ -10,15 +10,15 @@ const Slider = () => {
   return (
     <div>
         <Swiper
-      spaceBetween={50}
+      spaceBetween={24}
       slidesPerView={3}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide><img src={slider1} /></SwiperSlide>
-      <SwiperSlide><img src={slider2} /></SwiperSlide>
-      <SwiperSlide><img src={slider3} /></SwiperSlide>
-      <SwiperSlide><img src={slider4} /></SwiperSlide>
+      <SwiperSlide><img className='w-24 md:w-96' src={slider1} /></SwiperSlide>
+      <SwiperSlide><img className='w-24 md:w-96' src={slider2} /></SwiperSlide>
+      <SwiperSlide><img className='w-24 md:w-96' src={slider3} /></SwiperSlide>
+      <SwiperSlide><img className='w-24 md:w-96' src={slider4} /></SwiperSlide>
       
     </Swiper>
     

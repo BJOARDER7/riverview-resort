@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 const Root = () => {
   
   return (
-    <div>
+    <div className="mx-2 md:mx-8">
       <Helmet 
       title="RiverView Resort | Home"
       ></Helmet>

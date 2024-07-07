@@ -57,7 +57,7 @@ const Register = () => {
       ></Helmet>
   <div className="hero-content flex-col lg:flex-row">
     <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">Register Now!</h1>      
+      <h1 className="text-lg md:text-5xl font-bold">Register Now!</h1>      
     </div>
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <form onSubmit={handleRegister} className="card-body">
@@ -88,7 +88,7 @@ const Register = () => {
           name="password" 
           placeholder="Password" 
           className="input input-bordered" required />
-          <span className="absolute inset-y-0 right-1 top-8 right-4 flex items-center" onClick={() => setShowPassword(!showPassword)}>
+          <span className="absolute inset-y-0 top-8 right-4 flex items-center" onClick={() => setShowPassword(!showPassword)}>
             {
               showPassword ? <FaEyeSlash className="text-2xl"></FaEyeSlash> : <FaEye className="text-2xl"></FaEye>
             }

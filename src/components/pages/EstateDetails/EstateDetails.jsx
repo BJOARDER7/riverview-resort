@@ -14,7 +14,7 @@ const EstateDetails = () => {
       <Helmet 
       title="RiverView Resort | Estate Details"
       ></Helmet>
-  <figure className="px-10 pt-10">
+  <figure className="px-4 md:px-10 pt-4 md:pt-10">
     <img
       src={item.relevant_image}
       alt="Resort"
@@ -31,7 +31,7 @@ const EstateDetails = () => {
       <div className="flex justify-between">      
       <div>
         <p>Facilities -</p>
-        <div className="ps-16">
+        <div className="ps-4 md:ps-16">
         {item.facilities.map((list, idx) => <li key={idx}>{list}</li>)}
         </div>
       </div>      
